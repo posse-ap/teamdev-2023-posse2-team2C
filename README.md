@@ -1,7 +1,5 @@
 dbのパスワードがなぜか
-```
-secret
-```
+`secret`
 です
 <br>
 .env
