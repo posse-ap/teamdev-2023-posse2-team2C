@@ -19,6 +19,8 @@ git clone --recursive git@github.com:posse-ap/teamdev-2023-posse2-team2C.git
 4. 「Generate new token」をクリックして、新しいトークンを生成します。必要なスコープを設定して、トークンを生成します。
 5. トークンをコピーして、clone時に求められるパスワード入力欄に貼り付けます。
 
+### apiのセットアップ
+
 ```
 docker-compose build --no-cache
 docker-compose up -d
@@ -89,4 +91,47 @@ VITE_PUSHER_HOST="${PUSHER_HOST}"
 VITE_PUSHER_PORT="${PUSHER_PORT}"
 VITE_PUSHER_SCHEME="${PUSHER_SCHEME}"
 VITE_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+```
+
+## front のセットアップ
+
+```
+cd ../front
+npm install next react react-dom
+cd front
+npm run dev
+```
+
+`http://localhost:3000`にアクセス
+上手く行かない場合は、package.jsonをいかに変更する
+
+```
+{
+  "name": "front",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/css": "^11.10.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/roboto": "^4.5.8",
+    "@mui/material": "^5.12.2",
+    "autoprefixer": "10.4.14",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "next": "^13.3.1",
+    "postcss": "8.4.23",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tailwindcss": "3.3.2"
+  }
+}
 ```
