@@ -1,0 +1,6 @@
+[submodule "front"]
+	path = front
+	url = https://github.com/posse-ap/teamdev-2023-posse2-team2C-front.git
+[submodule "api"]
+	path = api
+	url = https://github.com/posse-ap/teamdev-2023-posse2-team2C-api.git
