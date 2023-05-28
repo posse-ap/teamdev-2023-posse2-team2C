@@ -39,6 +39,14 @@ APP_KEY=base64:GTnvVFS7m53DDDrWbx185abB7xlKkzcCXywYz/ffdHo=
 APP_DEBUG=true
 APP_URL=http://localhost
 
+	
+SESSION_DOMAIN=localhost
+SANCTUM_STATEFUL_DOMAINS=localhost:3000
+FRONT_SERVICE_HOST=localhost:3000
+NEXT_PUBLIC_API_BASE=http://localhost:80
+
+
+
 LOG_CHANNEL=stack
 LOG_DEPRECATIONS_CHANNEL=null
 LOG_LEVEL=debug
